@@ -15,7 +15,12 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  background: #eee;
+  background: rgb(128, 64, 0);
+  background: linear-gradient(
+    138deg,
+    rgba(128, 64, 0, 1) 43%,
+    rgba(255, 255, 255, 1) 100%
+  );
 }
 
 #nav {
