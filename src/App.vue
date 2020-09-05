@@ -1,5 +1,10 @@
 <template>
-  <div id="app" class="container">
+  <div id="app" @mousemove="ubicacion" class="container">
+    <!-- <img
+      :style="{left: x, top: y, position: 'absolute', width: '100px'}"
+      src="https://media.giphy.com/media/2kTO2z0emYWekZ3MHf/giphy.gif"
+      alt
+    />-->
     <div id="nav" class="row justify-content-end">
       <router-link to="/">Home</router-link>
       <router-link to="/filtrados">Filtrados</router-link>
@@ -7,6 +12,23 @@
     <router-view />
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      x: "20px",
+      y: "10px",
+    };
+  },
+  methods: {
+    ubicacion(event) {
+      this.x = event.clientX + "px";
+      this.y = event.clientY + "px";
+    },
+  },
+};
+</script>
 
 <style>
 #app {

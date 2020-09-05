@@ -1,7 +1,9 @@
 <template>
   <div class="home">
     <h1 class="mb-5">Math.Coffee</h1>
-    <img class="filtro" src="@/assets/filtro.png" alt="filtro" />
+    <transition appear name="filtro">
+      <img class="filtro" src="@/assets/filtro.png" alt="filtro" />
+    </transition>
 
     <div class="row align-items-center">
       <div class="input-group mb-3 col-sm-7">
@@ -40,7 +42,7 @@
           class="card shadow p-3 mb-5 bg-dark text-white rounded"
           style="width: 18rem;"
         >
-          <img src="@/assets/2615.png" class="card-img-top" alt />
+          <img src="@/assets/2615.png" class="card-img-top animate__animated animate__flip" alt />
           <div class="card-body">
             <h2 class="card-title">Ratio 1:{{ ratio }}</h2>
             <div v-show="mostrar">
